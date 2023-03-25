@@ -18,7 +18,7 @@ class YoworldItems():
         if isinstance(item_search, int):
             pass
         else:
-            search
+            pass
 
     @staticmethod
     def create_item(name: str, iid: int, price: int, url: str) -> Item:
