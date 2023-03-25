@@ -1,3 +1,11 @@
+/*
+	YoworldDB Item Scraper Using Web Page & API
+
+	Created in V due to performance
+
+	@author: ArroGant SnF
+	@since: 3/25/23
+*/
 import os
 import x.json2
 import net.http
