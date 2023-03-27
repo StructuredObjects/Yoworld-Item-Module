@@ -35,7 +35,6 @@ class YoworldItems():
     def fetch_all_items(self) -> bool:
         lines = self.__data.split("\n")
 
-        c = 0
         for line in lines:
             if len(line) == 0 | len(line) < 10: continue
 
@@ -52,7 +51,7 @@ class YoworldItems():
             no_case_sen = self.search.lower()
 
             if item._name == self.search: return [i]
-            else if self.search.lower() in item._name: return [i]
+            elif self.search.lower() in item._name: return [i]
 
             words_in_search = self.search.split(" ")
             for word in words_in_search:
