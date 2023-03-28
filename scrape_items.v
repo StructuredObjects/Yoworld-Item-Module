@@ -85,7 +85,7 @@ pub fn (mut s Scrape) scrape_page(content string)
             {
                     item_id = line.split("data")[1].replace("=\"", "").replace("\"></a>", "").split("/")[3].replace(".gif", "").replace("_60_60", "").int()
                     item_image = "https://yw-web.yoworld.com/cdn/items/" + line.trim_space().split("data=\"")[1].replace("\"></a>", "")
-                    item_name = page_lines[c+2].replace("</a>", "").trim_space().replace("~ ", "")
+                    item_name = page_lines[c+2].replace("</a>", "").trim_space().replace("~ ", "").replace("'", "").replace(",", "")
             }
 
             if item_name != "" && item_id > 0 && item_image != ""
