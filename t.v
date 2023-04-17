@@ -24,13 +24,15 @@ fn main()
 					item_price = "${value['price_coins']}"
 					if (item_price == "0" || item_price == "") && "${value['price_cash']}" != "0" {
 						item_price = "${value['price_cash']}yc"
-					}
+					} 
+					print("\x1b[92mNew In-Store Price ${item_price}\x1b[0m\n")
 				}
 			}
 		}
 		new_db += "('${info[0]}','${info[1]}','${info[2]}','${info[3]}')"
 		print("Item: ${info[0]} | ${info[1]} | ${item_price}\n")
 	}
+	os.write_file("t.txt", new_db) or {return}
 }
 
 fn parse_line(line string) []string

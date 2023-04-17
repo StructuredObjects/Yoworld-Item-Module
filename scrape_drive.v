@@ -15,7 +15,8 @@ fn main()
 	s.lines = s.data.split("\n")
 
 	for {
-		if s.loop == s.lines.len || s.loop > s.lines.len { break }
+		// if s.loop == s.lines.len || s.loop > s.lines.len { break }
+		if s.loop > 15 { break }
 		line := s.lines[s.loop]
 		println("Item Name: ${line}")
 		s.loop+=3
